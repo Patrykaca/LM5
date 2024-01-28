@@ -16,7 +16,8 @@ class LL1:
         self.first_S = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(']
         self.first_P = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(']
         self.first_R = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-        self.follow_R = ['*', ':', '+', '-', '^', '@', ';', ')', '$']
+        self.first_R_dot = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
+        self.follow_R = ['*', ':', '+', '-', '^', '@', ';', ')']
         self.first_W = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(']
 
         self.char = 0
@@ -86,16 +87,19 @@ class LL1:
                     return False  # If dot already encountered or no digit before dot or no digit after dot, return False
                 dot_encountered = True  # Set the flag if a dot is encountered for the first time
                 self.next_char()
-            elif self.check_first(self.follow_R):
+                continue
+            elif not self.check_first(self.first_R):
                 return True
             else:  # If any other character is encountered, return False
                 return False
-        # In case there is no '$' at the end of the string, which should not happen as per the requirements
         return False
 
 
+
+
 # arithmetic_expression = input('Enter: ')
-arithmetic_expression = '(1.2*3)+5-(23.4+3)^3;8:8;3;' + '$'
+# arithmetic_expression = '(1.2*3)+5-(23.4+3)^3;8:8;3;' + '$'
+arithmetic_expression = '22+3;' + '$'
 ll1 = LL1(arithmetic_expression)
 
 ret = ll1.read_S()
