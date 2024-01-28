@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12.1 WSL (Ubuntu): (/home/pkaca/.pyenv/versions/3.12.1/envs/venv_lingwistyka/bin/python)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12.1 WSL (Ubuntu): (/home/pkaca/.pyenv/versions/3.12.1/envs/venv_lingwistyka/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (LM_lab_5)" project-jdk-type="Python SDK" />
 </project>

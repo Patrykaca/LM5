@@ -111,8 +111,6 @@ class LL1:
                 return False
         return False
 
-
-
 # arithmetic_expression = '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
 # arithmetic_expressions = [
 #     '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
@@ -139,6 +137,7 @@ class LL1:
 #
 # ll1 = LL1(arithmetic_expression)
 # result = ll1.read_S()
+
 
 arithmetic_expression = input('Podaj wyrażenie (pamiętaj o średniku):\n')
 ll1 = LL1(arithmetic_expression)
