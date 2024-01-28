@@ -113,25 +113,38 @@ class LL1:
 
 
 
-arithmetic_expression = '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
-arithmetic_expressions = [
-    '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
-    , '2+2-4523.234556+(53-3);'
-    , '((53.53:5)-5);13-(53.3^6);'
-    , '((53.53:5)-5);13-(.53.3^6);'
-    , '.43+56;'
-    , '2.2;.5;'
-    , '(4-0)^43;53-(53:56);'
-    , '(4-+1);'
-    , '2^4;'
-]
+# arithmetic_expression = '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
+# arithmetic_expressions = [
+#     '(1.2*3)+5-(3^(23.4+3)+0.05)^3;8:3;'
+#     , '2+2-4523.234556+(53-3);'
+#     , '((53.53:5)-5);13-(53.3^6);'
+#     , '((53.53:5)-5);13-(.53.3^6);'
+#     , '.43+56;'
+#     , '2.2;.5;'
+#     , '(4-0)^43;53-(53:56);'
+#     , '(4-+1);'
+#     , '2^4;'
+# ]
+#
+#
+# for arithmetic_expression in arithmetic_expressions:
+#     ll1 = LL1(arithmetic_expression)
+#     result = ll1.read_S()
+#     if result:
+#
+#         print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[92mzostało zaakceptowane\033[92m\033[0m.')
+#     else:
+#         print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[91mnie zostało zaakceptowane\033[91m\033[0m.')
+#
+#
+# ll1 = LL1(arithmetic_expression)
+# result = ll1.read_S()
 
+arithmetic_expression = input('Podaj wyrażenie (pamiętaj o średniku):\n')
+ll1 = LL1(arithmetic_expression)
+result = ll1.read_S()
+if result:
+    print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[92mzostało zaakceptowane\033[92m\033[0m.')
+else:
+    print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[91mnie zostało zaakceptowane\033[91m\033[0m.')
 
-for arithmetic_expression in arithmetic_expressions:
-    ll1 = LL1(arithmetic_expression)
-    result = ll1.read_S()
-    if result:
-
-        print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[92mzostało zaakceptowane\033[92m\033[0m.')
-    else:
-        print(f'Wyrażenie "\x1B[3m\033[93m{arithmetic_expression}\033[93m\x1B[0m" \033[1m\033[91mnie zostało zaakceptowane\033[91m\033[0m.')
